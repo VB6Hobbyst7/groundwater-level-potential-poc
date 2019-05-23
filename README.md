@@ -62,3 +62,6 @@ using PostGIS database
 * Add data validation 
 * Pump situation - ro or unknown
 * Date of sample always take the newest
+
+# Contact infortmation
+[link](https://www.orbiconinformatik.dk/)
