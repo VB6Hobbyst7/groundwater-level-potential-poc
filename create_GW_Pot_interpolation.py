@@ -734,10 +734,10 @@ if __name__ == '__main__':
     for i in range(len(prod_list)):
         print('Processing: {}'.format(prod_list[i]))
         customer_dump_site = r'C:\Temp\{}'.format(prod_list[i])
-        jupiter = jupiterAnalyser(cust_host= self.cust_host, cust_dbname = self.cust_dbname, cust_user = self.cust_user,
-                                  cust_password = self.cust_password, cust_port= self.cust_port,
-                                  geus_host= self.geus_host , geus_dbname = self.geus_dbname, geus_user= self.geus_user,
-                                  geus_password= self.geus_password, geus_port= self.geus_port)
+        jupiter = jupiterAnalyser(cust_host= secs.customer_url, cust_dbname = secs.customer_database, cust_user = secs.customer_username,
+                                  cust_password = secs.customer_password, cust_port= secs.customer_port,
+                                  geus_host= secs.geus_url, geus_dbname = secs.geus_url, geus_user= secs.geus_username,
+                                  geus_password= secs.geus_password, geus_port= secs.geus_port)
 
         # Bounding box
         bbox = jupiter.runQuery(
