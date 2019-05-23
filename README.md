@@ -26,11 +26,11 @@ The idea is to auto-generate the interpolation by using the scrips.
 7. Install PostgreSQL 9.5 or 10 if running locally some of the databases
 8. Install PGAdmin 4 as client more then welcome to use the command line as well
 9. Make a secret.py with default hardcoded values:
-	* gues_url =  '<Value>'
-	* gues_database = '<Value>'
-	* gues_port = <Value>
-	* gues_username = '<Value>'
-	* gues_password = '<Value>'
+	* geus_url =  '<Value>'
+	* geus_database = '<Value>'
+	* geus_port = <Value>
+	* geus_username = '<Value>'
+	* geus_password = '<Value>'
 	* customer_url =  '<Value>'
 	* customer_database = '<Value>'
 	* customer_port = <Value>
