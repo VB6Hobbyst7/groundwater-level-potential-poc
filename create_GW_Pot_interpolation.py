@@ -786,10 +786,9 @@ if __name__ == '__main__':
                                                                         mask_wkt=mask_wkt,
                                                                         srid=srid)])
 
-    print("Removing any boreholes with average water level lower than the bottom level of the borehole")
-    dgu_data = dgu_data[(dgu_data['calc_bottom_kote'].notnull()) &
-                        (dgu_data['avg_wl_watlevgrsu'] >= dgu_data['calc_bottom_kote'])].reindex()
 
+    coast_support['val'] = 0
+    stream_support['val'] = 0
 
     print("""Removing all boreholes where the measure water table exceeds the terrain.""")
     dgu_data['avg_wl_watlevgrsu'] = np.where(dgu_data['avg_wl_watlevgrsu'] < 0, 0, dgu_data['avg_wl_watlevgrsu'])
@@ -847,9 +846,6 @@ if __name__ == '__main__':
 
     print("Creating shapefile with merged dataset for MUT without streams support points")
     mut_file_path = createFolder(customer_dump_site, r"result_mut_without_stream_suppot")
-
-    coast_support['val'] = 0
-    stream_support['val'] = 0
 
     x_concat = np.concatenate((dgu_data['xutm'], coast_support['x']))
     y_concat = np.concatenate((dgu_data['yutm'], coast_support['y']))
